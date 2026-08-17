@@ -1,0 +1,69 @@
+<section id="services" class="services">
+    <!-- Klickbare Kachel -->
+    <a href="#service-1" class="service-card">
+        <img src="images/consulting.jpg"
+             alt="Besprechung eines IT-Projekts">
+
+    <div class="service-text">
+        <h2>IT Consulting</h2>
+        <p>
+            Professionelle Beratung für Ihre IT-Projekte.
+        </p>
+    </div>
+</a>
+</section>
+
+<!-- Verstecktes Pop-up -->
+
+<section id="service-1"
+         class="modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="service-1-title">
+
+<!-- Klick auf den Hintergrund schließt das Fenster -->
+<a href="#services"
+   class="modal-background"
+   aria-label="Fenster schließen"></a>
+
+<div class="modal-content">
+
+    <div class="modal-image">
+        <img src="images/consulting.jpg"
+             alt="IT-Consulting und Projektbesprechung">
+    </div>
+
+    <div class="modal-information">
+        <a href="#services"
+           class="modal-close"
+           aria-label="Fenster schließen">
+            &times;
+        </a>
+
+        <h2 id="service-1-title">IT Consulting</h2>
+
+        <p>
+            Wir analysieren Ihre Anforderungen und entwickeln
+            maßgeschneiderte Lösungen für Ihre IT-Projekte.
+        </p>
+
+        <div class="details">
+            <h3>Unsere Leistungen</h3>
+
+            <ul>
+                <li>Analyse Ihrer Anforderungen</li>
+                <li>Planung der technischen Lösung</li>
+                <li>Begleitung bei der Umsetzung</li>
+            </ul>
+        </div>
+
+        <a href="kontakt.html" class="button">
+            Kontaktieren Sie uns
+        </a>
+
+        <a href="#services" class="button button-secondary">
+            Schließen
+        </a>
+    </div>
+</div>
+</section>

@@ -1,0 +1,202 @@
+nav {
+  background-color: #ffffff;/*Setzt die Hintergrundfarbe des Navigationsbereichs auf Weiß.*/
+  padding: 10px;/*Erzeugt einen Innenabstand von 10 Pixeln an allen vier Seiten (oben, unten, links, rechts) zwischen dem Rand der Navigationsleiste und den darin liegenden Menüpunkten.*/
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);/*Fügt einen leichten, dezenten Schatten unter der Navigationsleiste hinzu, damit sie sich visuell vom Rest der Seite abhebt.*/
+
+}
+/*0: Kein horizontaler Versatz (Schatten geht nicht nach links/rechts).
+
+2px: Versatz nach unten um 2 Pixel.
+
+5px: Weichzeichnung/Unschärfe des Schattens.
+
+rgba(0,0,0,0.1): Schwarzer Schatten mit 10 % Deckkraft (sehr transparent).*/
+
+
+nav ul {
+  display: flex;/*Ordnet die Menüpunkte nebeneinander in einer Reihe an.*/
+  flex-wrap: wrap;/*Lässt Menüpunkte automatisch in die nächste Zeile rutschen, wenn der Platz zu eng wird.*/
+  list-style: none;/*Entfernt die schwarzen Standard-Stichpunkte der Liste.*/
+  margin: 0;/*Löscht den äußeren Standard-Abstand der Liste.*/
+  padding: 0;/*Löscht den inneren Standard-Einzug der Liste.*/
+  gap: 10px;/*Erzeugt exakt $10\text{ Pixel}$ Abstand zwischen den einzelnen Menü-Buttons.*/
+}
+
+nav ul li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #2c3e50;
+  background-color: #f4f6f9;
+  border-radius: 4px;
+  font-weight: bold;
+}
+/*background-color: #ffffff;
+
+Setzt die Hintergrundfarbe des Navigationsbereichs auf Weiß.
+
+padding: 10px;
+
+Erzeugt einen Innenabstand von 10 Pixeln an allen vier Seiten (oben, unten, links, rechts) zwischen dem Rand der Navigationsleiste und den darin liegenden Menüpunkten.
+
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+Fügt einen leichten, dezenten Schatten unter der Navigationsleiste hinzu, damit sie sich visuell vom Rest der Seite abhebt.
+
+0: Kein horizontaler Versatz (Schatten geht nicht nach links/rechts).
+
+2px: Versatz nach unten um 2 Pixel.
+
+5px: Weichzeichnung/Unschärfe des Schattens.
+
+rgba(0,0,0,0.1): Schwarzer Schatten mit 10 % Deckkraft (sehr transparent).*/
+
+nav ul li a:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+/*:hover
+
+Aktiviert den Style-Effekt, sobald der Mauszeiger über den Button fährt.
+
+background-color: #0056b3;
+
+Wechselt die Hintergrundfarbe zu einem kräftigen Blau.
+
+color: #ffffff;Ändert die Schriftfarbe auf Weiß, damit der Text auf dunklem Grund lesbar bleibt.
+
+Ändert die Schriftfarbe auf Weiß, damit der textauf dunklem Grund lesbar bleibt.*/
+
+/* Responsive Bilder */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+/* Layout für das Kurs-Grid */
+.kurs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.kurs-card {
+  background-color: #f4f6f9;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid #0056b3;
+}
+
+
+/* ==========================================
+   Tabellen-Styling (für kurse.html)
+   ========================================== */
+
+/* Container für responsive Darstellung auf Mobilgeräten */
+#kurs-tabelle {
+  overflow-x: auto;
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Tabellenkopf */
+th {
+  background-color: #0056b3;
+  color: #ffffff;
+  text-align: left;
+  padding: 12px 15px;
+  font-weight: bold;
+}
+
+/* Tabellenzellen */
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #2c3e50;
+}
+
+/* Abwechselnde Zeilenfarben (Zebra-Muster) */
+tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hover-Effekt beim Drüberfahren mit der Maus */
+tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Letzte Zeile: Rand unten entfernen */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==========================================
+   Kurs-Detailkarten (für kurse.html)
+   ========================================== */
+
+.kurs-detail-card {
+  background-color: #f4f6f9;
+  border-left: 4px solid #0056b3;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+.kurs-detail-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}/*Was dieser Code bewirkt:
+Blauer Header: Nutzt das gleiche Primärblau (#0056b3) wie deine Buttons.
+
+Zebra-Muster: Jede zweite Zeile erhält einen leicht grauen Hintergrund für eine bessere Lesbarkeit.
+
+Hover-Effekt: Die aktuell fokussierte Zeile wird beim Drüberfahren hervorgehoben.
+
+Mobil-Optimiert: Der overflow-x: auto-Wrapper verhindert, dass die Tabelle auf kleinen Bildschirmen das Design sprengt.*/
+
+
+
+/* ==========================================
+   Kontaktseite Styling (kontakt.html)
+   ========================================== */
+
+#faq h3 {
+  color: #0056b3;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+#externe-links a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#externe-links a:hover {
+  text-decoration: underline;
+}
+
+main > p a {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #0056b3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main > p a:hover {
+  text-decoration: underline;
+}
+

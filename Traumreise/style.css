@@ -1,0 +1,265 @@
+/* 1. Allgemeine Seiteneinstellungen (Hintergrundfarbe, Schriftart, Schriftfarbe, Schriftgröße) */
+body {
+  background-color: #f4f6f9; /* Hintergrundfarbe */
+  color: #2c3e50;            /* Schriftfarbe */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Schriftart */
+  font-size: 16px;           /* Schriftgröße */
+  line-height: 1.6; /*platz zwischen den zeilen*/
+  margin: 20px; /*abstand zum bildschirmrand*/
+}
+
+/* 2. Styling für spezifische Tags (h1, h2, p) */
+h1 {
+  color: #800020;            /* Katar-Burgunderrot */
+  font-size: 32px;
+  border-bottom: 2px solid #800020;/*Zeichnet eine rote Linie unter die Überschrift*/
+  padding-bottom: 10px;/*Macht Platz zwischen der Schrift und der Linie.*/
+}
+
+h2 {
+  color: #0056b3;
+  font-size: 24px;
+  margin-top: 25px;/*Schiebt den Text 25 Pixel nach unten weg vom Element darüber*/
+}
+
+p {
+  font-size: 16px; /*bezuglich schriftgröße */
+  margin-bottom: 15px; /*Macht 15 Pixel Platz unter jedem Absatz.*/
+}
+
+/* 3. Vier eigene CSS-Klassen */
+
+/* Klasse 1: .highlight (Hervorhebung für wichtige Hinweise) */
+.highlight {     /*gelbe hinweisbox*/
+  background-color: #fff3cd;/*Hintergrund wird gelb.*/
+  border-left: 5px solid #ffc107;/*Dicker gelber Balken am linken Rand.*/
+ 
+  padding: 10px 15px;/*Platz im Kasten (oben/unten 10 Pixel, links/rechts 15 Pixel).*/
+  font-weight: bold;/*Macht die Schrift fett.*/
+}
+
+/* Klasse 2: .reise (Styling für Reiseinhalte) */
+.reise {
+  color: #155724;
+  background-color: #d4edda;/*Hintergrund wird hellgrün.*/
+  padding: 8px;/*8 Pixel Platz im Kasten.*/
+  border-radius: 4px;/*Rundet die Ecken leicht ab.*/
+}
+
+/* Klasse 3: .hotel (Styling für Unterkünfte) */
+.hotel {
+  font-style: italic;/*Macht die Schrift kursiv (schräg).*/
+  color: #495057; /*schrift dunkelgrau*/
+  border: 1px dashed #6c757d;/*Gestrichelte graue Linie außen herum.*/
+  padding: 5px 10px;/*Platz im Kasten (oben/unten 5 Pixel, links/rechts 10 Pixel).*/
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+
+/* Klasse 4: .kultur (Styling für Kulturpunkte) */
+.kultur {
+  background-color: #e2e3e5;/*Hintergrund wird hellgrau.*/
+  color: #383d41;/*Schrift wird dunkelgrau.*/
+  padding: 5px 8px;/*Platz im Kasten (oben/unten 5 Pixel, links/rechts 8 Pixel).*/
+  border-radius: 3px;/*Rundet die Ecken leicht ab.*/
+}
+
+
+
+
+/* =========================================================
+   ERWEITERUNGEN: NAVIGATION & RESPONSIVE BILDER
+   ========================================================= */
+
+/* PUNKT 1: Fixierte Navigation beim Scrollen */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0 10px;
+  gap: 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #2c3e50;
+  background-color: #f4f6f9;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* Eigene Verbesserung: Weicher Übergang */
+}
+
+/* EIGENE VERBESSERUNG A: Moderner Hover-Effekt mit Anhebung & Farbwechsel */
+nav ul li a:hover {
+  background-color: #800020;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Bilder-Galerie & Responsive Bilder */
+#bilder {
+  display: flex;
+  flex-wrap: wrap;           /* Ermöglicht Umbruch auf Mobilgeräten */
+  gap: 15px;
+}
+
+#bilder img, .img-responsive {
+  flex: 1 1 280px;           /* Desktop: nebeneinander, Mobil: breiten sich aus */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;         /* VERHINDERT VERZERRUNG DER BILDER */
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Responsive Tabellenanpassung */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Horizontales Scrollen auf kleinen Bildschirmen */
+}
+
+
+/* Responsive Tabellenanpassung */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Horizontales Scrollen auf kleinen Bildschirmen */
+}
+
+table, th, td {
+  border: 1px solid #dee2e6;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #800020;
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+
+/* =========================================================
+   PUNKT 5: RESPONSIVE LAYOUT FÜR KLEINE BILDSCHIRME (MOBILE)
+   ========================================================= */
+
+@media (max-width: 600px) {
+/* VERBESSERUNG 1: Neue Hintergrundfarbe auf Smartphones & verkleinerte Ränder */
+  body {
+    background-color: #e9ecef; /* Leicht abweichender Grauton für besseren Kontrast auf Mobilgeräten */
+    margin: 10px;              /* Abstände verkleinert */
+  }
+
+  /* -------------------------------------------------------
+     PUNKT 6: RESPONSIVE SCHRIFT UNTER 600PX (h1, h2, p)
+     ------------------------------------------------------- */
+  h1 {
+    font-size: 22px;
+    padding-bottom: 6px; /* Von 32px auf 22px verkleinert */
+  }
+
+  h2 {
+    font-size: 19px;/* Von 24px auf 18px verkleinert */
+    margin-top: 18px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+p {
+    font-size: 14.5px;         /* Von 16px auf 14.5px verkleinert für optimale Lesbarkeit */
+    line-height: 1.5;
+  }
+
+  /* Menüleiste unter 600px untereinander darstellen */
+  nav ul {
+    flex-direction: column;  /* Menüpunkte untereinander */
+    padding: 10px;
+    gap: 10px;               /* Gleiche Abstände */
+  }
+
+
+
+  /* -------------------------------------------------------
+     PUNKT 7: EIGENE RESPONSIVE VERBESSERUNGEN
+     ------------------------------------------------------- */
+
+/* Navigation untereinander darstellen */
+  nav ul {
+    flex-direction: column;    /* Menüpunkte untereinander */
+    padding: 10px;
+    gap: 10px;                /* Gleiche Abstände */
+  }
+
+  /* Maximale Bildhöhe für Smartphones anpassen */
+  /*#bilder img, .img-responsive {
+    max-height: 220px;
+  }+/
+
+/* VERBESSERUNG 2: Größere Buttons & Schatten für optimale Touch-Bedienung */
+  nav ul li a {
+    text-align: center;
+    padding: 14px 20px;        /* Vergrößerte Klick-/Touch-Fläche */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffff; /* Kontrastreicher weißer Button-Hintergrund */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    border-radius: 6px;
+  }
+/* VERBESSERUNG 3: Abgerundete Bilder mit neuem Schatten auf Mobilgeräten */
+  #bilder img, .img-responsive {
+    max-height: 220px;
+    border-radius: 12px;       /* Stärker abgerundete Bild-Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Schatten für Galeriebilder */
+  }
+
+  /* Tabelle auf kleinen Bildschirmen kompakter darstellen */
+  th, td {
+    padding: 8px 6px;
+    font-size: 14px;
+  }
+}
+
+/* erstens: Was wurde ergänzt/verbessert?
+.card: Verleiht den einzelnen Sektionen der Seite einen sauberen, weißen Hintergrundkasten mit sanftem Schatten.
+
+Responsive Überschriften & Texte: In der @media (max-width: 600px)-Regel werden Schriftgrößen für h1, h2, h3 und body verkleinert, damit auf Mobilgeräten nichts abgeschnitten wird.
+
+Responsive Tabellen: table, th und td wurden gestaltet, damit Tabellen auch auf Smartphones durch den .table-container gut lesbar bleiben.
+
+Optimierte Bilder-Höhe: height: auto mit max-height verhindert, dass Bilder auf Handys zu viel vertikalen Platz einnehmen.*/
+
+
+/*zweitens: Übersicht der Ergänzungen:
+Punkt 6: h1 (22px), h2 (18px) und p (14.5px) passen sich unter 600px nahtlos an Smartphone-Bildschirme an.
+
+Punkt 7 (Verbesserung 1): body wechselt mobil die Hintergrundfarbe zu #e9ecef für besseren visuellen Kontrast.
+
+Punkt 7 (Verbesserung 2): Die Menü-Buttons erhalten mehr Padding (14px 20px), einen Schatten und einen weißen Hintergrund, um sie wie Touch-Buttons bedienen zu können.
+
+Punkt 7 (Verbesserung 3): Bilder haben mobil stärker abgerundete Ecken (12px) und einen dezenten box-shadow.*/

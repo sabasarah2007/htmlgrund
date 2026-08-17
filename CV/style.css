@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+header {
+    position:sticky ;
+    top: 0;
+    background-color: #ffffff;
+    border-bottom: 2px solid #cccccc;
+    z-index: 1000;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.head img {
+    width: 130px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #333333;
+}
+
+.header-text h1 {
+    font-size: 1.8rem;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+.menue {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: #333333;
+    padding: 0.6rem;
+}
+
+.menue a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px 12px;
+}
+
+.menue a:hover {
+    background-color: #555555;
+    border-radius: 4px;
+}
+
+.inhalt {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.left, .right {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: #0056b3;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 4px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+p {
+    margin-bottom: 0.8rem;
+}
+
+.liste {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333333;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+/* Responsive Design für Mobilgeräte (max. 600px) */
+@media (max-width: 600px) {
+    .head {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menue {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .inhalt {
+        flex-direction: column;
+    }
+
+
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .head img {
+        width: 100px;
+        max-width: 100%;
+    }
+}
+
+
+
+/* ==========================================
+   STYLING FÜR SEITE 2 (PROJEKT-TABELLE)
+   ========================================== */
+
+/* Inhaltsbereich für die Tabellenseite */
+.inhalt-seite2 {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.full-width {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+/* Tabellen-Container für horizontales Scrollen auf Mobilgeräten */
+.table-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+/* Tabellengestaltung */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Tabellenkopf */
+thead th {
+    background-color: #0056b3;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Alternierende Zeilenfarben für bessere Lesbarkeit */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Hover-Effekt für Tabellenzeilen */
+tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Tabellenfuß */
+tfoot td {
+    background-color: #e9ecef;
+    font-weight: bold;
+    text-align: center;
+    color: #555555;
+}
+
+/* Responsive Anpassung für kleinen Bildschirm (<600px) */
+@media (max-width: 600px) {
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+
+
+/* ==========================================
+   STYLING FÜR SEITE 3 (KONTAKTFORMULAR)
+   ========================================== */
+
+/* Layout-Container */
+.inhalt-seite3 {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Formular-Layout */
+.kontakt-formular {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+/* Eingabefelder-Gruppen */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333333;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fdfdfd;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effekt bei Klick/Fokus ins Feld */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+    background-color: #ffffff;
+}
+
+/* Textarea Anpassung */
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Absende-Button */
+.btn-submit {
+    background-color: #0056b3;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #003d80;
+}
+
+/* Responsive Anpassung für Mobilgeräte (<600px) */
+@media (max-width: 600px) {
+    .btn-submit {
+        width: 100%; /* Vollbreiter Button auf Smartphones */
+    }
+}

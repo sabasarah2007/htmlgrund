@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- sorgt für responsive site -->
+  <title>Kursübersicht - FutureSkills Akademie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="kurse.html">Alle Kurse</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Unsere Kurse & Weiterbildungen</h1>
+        <p>Finden Sie die passende Schulung für Ihre berufliche Zukunft.</p>
+    </header>
+
+    <main>
+            <!-- Übersichtstabelle -->
+        <section id="kurs-tabelle">
+        <h2>Kursübersicht auf einen Blick</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kurs</th>
+                        <th>Dauer</th>
+                        <th>Unterrichtsform</th>
+                        <th>Vorkenntnisse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML und CSS</td>
+                        <td>5 Tage</td>
+                        <td>Präsenz</td>
+                        <td>keine</td>
+                    </tr>
+                    <tr>
+                        <td>Linux-Grundlagen</td>
+                        <td>4 Tage</td>
+                        <td>Präsenz</td>
+                        <td>IT-Grundlagen</td>
+                    </tr>
+                    <tr>
+                        <td>Bewerbungstraining</td>
+                        <td>2 Tage</td>
+                        <td>Online</td>
+                        <td>keine</td>
+                    </tr>
+                    <tr>
+                        <td>Netzwerktechnik</td>
+                        <td>5 Tage</td>
+                        <td>Präsenz</td>
+                        <td>IT-Grundlagen</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Detailansicht der vier Kurse -->
+        <section id="kurs-details">
+            <h2>Detaillierte Kursbeschreibungen</h2>
+
+            <!-- Kurs 1 -->
+            <article class="kurs-detail-card">
+                <h3>HTML und CSS</h3>
+                <p><strong>Zielgruppe:</strong> Einsteiger in die Webentwicklung, Umschüler und Mediengestalter.</p>
+                <p><strong>Lernziele:</strong> Erstellung strukturierter HTML5-Dokumente, Styling mit CSS3, Erstellung von responsivem Webdesign für mobile Geräte.</p>
+                <p><strong>Dauer:</strong> 5 Tage</p>
+                <p><strong>Benötigte Vorkenntnisse:</strong> Keine</p>
+                <p><strong>Mögliche berufliche Vorteile:</strong> Einstieg in das Junior-Webdesign, eigene Pflege von Unternehmens-Websites, ideale Basis für spätere JavaScript-Kenntnisse.</p>
+            </article>
+
+            <!-- Kurs 2 -->
+            <article class="kurs-detail-card">
+                <h3>Linux-Grundlagen</h3>
+                <p><strong>Zielgruppe:</strong> IT-Interessierte, angehende Systemadministratoren und Anwendungsentwickler.</p>
+                <p><strong>Lernziele:</strong> Umgang mit der Linux-Kommandozeile (Shell), Benutzer- und Rechteverwaltung, grundlegende Systemkonfiguration.</p>
+                <p><strong>Dauer:</strong> 4 Tage</p>
+                <p><strong>Benötigte Vorkenntnisse:</strong> IT-Grundlagen</p>
+                <p><strong>Mögliche berufliche Vorteile:</strong> Fundierte Kenntnisse für die Arbeit in Serverumgebungen, Cloud-Services und DevOps-Bereichen.</p>
+            </article>
+            <!-- Kurs 3 -->
+            <article class="kurs-detail-card">
+                <h3>Bewerbungstraining</h3>
+                <p><strong>Zielgruppe:</strong> Arbeitssuchende, Umschüler und Berufsneuorientierte.</p>
+                <p><strong>Lernziele:</strong> Erstellung professioneller Lebensläufe und Anschreiben, Vorbereitung auf Vorstellungsgespräche, Nutzung digitaler Jobbörsen.</p>
+                <p><strong>Dauer:</strong> 2 Tage</p>
+                <p><strong>Benötigte Vorkenntnisse:</strong> Keine</p>
+                <p><strong>Mögliche berufliche Vorteile:</strong> Höhere Erfolgschancen im Bewerbungsprozess, selbstsicheres Auftreten bei Arbeitgebern.</p>
+            </article>
+
+            <!-- Kurs 4 -->
+            <article class="kurs-detail-card">
+                <h3>Netzwerktechnik</h3>
+                <p><strong>Zielgruppe:</strong> Fachkräfte im IT-Support, Systemintegratoren und Techniker.</p>
+                <p><strong>Lernziele:</strong> Grundlagen des OSI-Modells, IPv4/IPv6-Adressierung, Konfiguration von Routern und Switches, Fehlersuche im Netzwerk.</p>
+                <p><strong>Dauer:</strong> 5 Tage</p>
+                <p><strong>Benötigte Vorkenntnisse:</strong> IT-Grundlagen</p>
+                <p><strong>Mögliche berufliche Vorteile:</strong> Befähigung zur Betreuung von Unternehmensnetzwerken und IT-Infrastrukturen.</p>
+            </article>
+        </section>
+        
+        <section>
+        <h2>Sprache & Beruf</h2>
+        <p><strong>Bewerbungstraining:</strong> Start: Jederzeit möglich | Dauer: 2 Wochen</p>
+        <p><strong>Deutsch für den Beruf (B2/C1):</strong> Start: 01.09.2026 | Dauer: 12 Wochen</p>
+        </section>
+        <!-- Geordnete Liste: Ablauf der Kursanmeldung -->
+        <section id="anmeldeablauf">
+        <h2>Ablauf einer Kursanmeldung</h2>
+        <ol>
+            <li><strong>Kursauswahl:</strong> Wählen Sie aus unserer Übersicht den gewünschten Kurs aus.</li>
+            <li><strong>Beratungsgespräch:</strong> Vereinbaren Sie einen unverbindlichen Beratungstermin mit unserem Team.</li>
+            <li><strong>Förderung klären:</strong> Wir prüfen gemeinsam mit Ihnen die Fördermöglichkeiten (z. B. Bildungsgutschein).</li>
+            <li><strong>Anmeldung einreichen:</strong> Füllen Sie das Anmeldeformular aus und reichen Sie erforderliche Unterlagen ein.</li>
+            <li><strong>Kursstart:</strong> Sie erhalten Ihre Zugangsinformationen und starten zum vereinbarten Termin.</li>
+        </ol>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 FutureSkills Akademie | <a href="kontakt.html">Kontakt & Impressum</a></p>
+    </footer>
+</body>
+</html>

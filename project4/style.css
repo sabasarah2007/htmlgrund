@@ -1,0 +1,174 @@
+/* Kachel */
+
+.service-card {
+display: block;
+color: white;
+background-color: #1e293b;
+border: 2px solid #475569;
+border-radius: 16px;
+overflow: hidden;
+text-decoration: none;
+transition: transform 0.25s, border-color 0.25s;
+}
+
+.service-card:hover {
+transform: translateY(-6px);
+border-color: #0d8cff;
+}
+
+.service-card img {
+width: 100%;
+height: 260px;
+object-fit: cover;
+display: block;
+}
+
+.service-text {
+padding: 24px;
+}
+
+/* Pop-up ist zunächst unsichtbar */
+
+.modal {
+position: fixed;
+inset: 0;
+z-index: 1000;
+
+display: none;
+place-items: center;
+
+padding: 30px;
+}
+
+/* Pop-up nach dem Klick anzeigen */
+
+.modal:target {
+display: grid;
+}
+
+/* Dunkler Hintergrund */
+
+.modal-background {
+position: absolute;
+inset: 0;
+
+background-color: rgba(2, 6, 23, 0.85);
+backdrop-filter: blur(7px);
+}
+
+/* Inhalt des Pop-ups */
+
+.modal-content {
+position: relative;
+z-index: 1;
+
+display: grid;
+grid-template-columns: 1fr 1.4fr;
+
+width: min(1200px, 95vw);
+max-height: 90vh;
+overflow: auto;
+
+background-color: #1e293b;
+border-radius: 20px;
+color: white;
+}
+
+/* Bild */
+
+.modal-image img {
+width: 100%;
+height: 100%;
+min-height: 450px;
+object-fit: cover;
+display: block;
+}
+
+/* Textbereich */
+
+.modal-information {
+position: relative;
+padding: 45px;
+}
+
+.modal-information h2 {
+margin-top: 0;
+font-size: 2.5rem;
+}
+
+.modal-information p {
+color: #cbd5e1;
+font-size: 1.15rem;
+line-height: 1.7;
+}
+
+/* Detailkasten */
+
+.details {
+margin: 25px 0;
+padding: 20px;
+
+background-color: #334155;
+border-left: 5px solid #0d8cff;
+border-radius: 12px;
+}
+
+.details li {
+margin: 12px 0;
+}
+
+/* Schließen-Symbol */
+
+.modal-close {
+position: absolute;
+top: 15px;
+right: 20px;
+
+color: white;
+font-size: 2.5rem;
+text-decoration: none;
+}
+
+/* Schaltflächen */
+
+.button {
+display: inline-block;
+margin: 8px 12px 0 0;
+padding: 14px 22px;
+
+background-color: #0874d1;
+color: white;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.button-secondary {
+background-color: transparent;
+border: 2px solid #0d8cff;
+}
+
+/* Smartphone-Ansicht */
+
+@media (max-width: 600px) {
+.modal {
+padding: 15px;
+}
+
+.modal-content {
+    grid-template-columns: 1fr;
+}
+
+.modal-image img {
+    min-height: 220px;
+    max-height: 280px;
+}
+
+.modal-information {
+    padding: 30px 20px;
+}
+
+.modal-information h2 {
+    font-size: 1.8rem;
+}
+}
